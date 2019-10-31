@@ -4,7 +4,7 @@ let Schema = mongoose.Schema;
 
 //Define schema
 let userSchema = new Schema({
-    name: {
+    nombre: {
         type: String,
         required: true
     },
@@ -21,6 +21,7 @@ let userSchema = new Schema({
         required: false
     },
     role: {
+        type: String,
         defaul: 'USER_ROLE'
     },
     estado: {
@@ -33,6 +34,6 @@ let userSchema = new Schema({
     },
 })
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Usuario', userSchema);
 
 //modelo user con la config de userSchema
